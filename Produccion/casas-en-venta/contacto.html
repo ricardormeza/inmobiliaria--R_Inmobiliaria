@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Inmobiliaria | La casa de tus sueños.</title>
+    <script src="build/js/app.js" async></script>
+    <script src="build/js/modernizr.js" async></script>
+    <link rel="icon" href="/build/img/r-icono.ico">
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="preload" href="build/css/app.css" as="style">
+    <link rel="preload" href="build/js/app.js" as="script">
+    <link rel="preload" href="build/js/modernizr.js" as="script">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="title" content="R Inmobiliaria | La casa de tus sueños.">
+    <meta name="description" content="La casa de tus sueños">
+    <meta name="keywords" content="Casas, Departamento, FOVISSSTE, Renta Departamento, compra de casa">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.alternativa19delsur.com/">
+    <meta name="author" content="Alternativa 19 del Sur">
+    <meta name="Abstract" content="La casa de tus sueños">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TG9HHP7');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG9HHP7"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <a href="index.html">
+                <img src="build/img/logotipo-rinmobiliaria--blanci.webp" alt="R Inmobiliaria logo"
+                width="245"
+                height="135">
+            </a>
+            <div class="mobile-menu">
+                <img src="build/img/icons8-menu-90.webp" alt="icono menu responsive"
+                width="70"
+                height="70">
+            </div>
+            <nav class="navegacion ">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#casas">Inmuebles</a>
+                <!-- <a href="index.html#especialidades">Especialidades</a> -->
+                <!-- <a href="index.html#lesiones">Lesiones</a> -->
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-contacto">
+        <div class="formulario-titulos">
+            <!-- <h1 class="cuadro-contacto">Compra de casa</h1> -->
+            <h2>La propiedad de mis sueños</h2>
+            <p>Por favor completa el siguiente formulario</p>
+        </div>
+        
+        <div class="formu">
+            <form action="enviar.php" method="POST">
+                <fieldset class="formu-info1">
+                    <legend>Información personal</legend>
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required>
+    
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Tu email" required>
+
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Tu telefono" required>
+
+                    
+                </fieldset>
+                <fieldset class="formu-info2">
+                    <legend>Información del Inmueble</legend>
+                        <!-- <div class="tipocasa">
+                            <label for="tipocasa">¿Qué tipo de inmueble buscas?</label>
+                            <label><input type="radio" name="genero" value="Casa">Casa</label>
+                            <label><input type="radio" name="genero" value="Departamento">Departamento</label>
+                        </div> -->
+                    <!-- <label for="tipocasa">¿Qué tipo de inmueble buscas?</label>
+                    <label><input type="radio" name="genero" value="Casa">Casa</label>
+                    <label><input type="radio" name="genero" value="Departamento">Departamento</label> -->
+                    <select name="tipocasa" id="tipocasa" data-form-field="tipocasa">
+                        <option value="NULL" selected disabled>Seleccione un tipo de inmueble</option>
+                        <option value="Casa">Casa</option>
+                        <option value="Departamento">Departamento</option>
+                    </select>
+
+                    <label for="ubicacion">¿En que zona buscas?</label>
+                    <select name="ubicacion" id="ubicacion" data-form-field="ubicacion">
+                        <option value="null" selected disabled>Seleccione una zona</option>
+                        <option value="Almoloya">Almoloya</option>
+                        <option value="Toluca">Toluca</option>
+                    </select>
+
+                    <label for="presupuesto">Presupuesto de compra</label>
+                    <select name="presupuesto" id="presupuesto" data-form-field="presupuesto">
+                        <option value="null" selected disabled>Seleccione un presupuesto</option>
+                        <option value="De 300mil a 500mil">De $300,000.00 a $500,000.00 MXN</option>
+                        <option value="De 500mil a 800mil">De $500,000.00 a $800,000.00 MXN</option>
+                        <option value="De 800mil a 1millon">De $800,000.00 a $1,000,000.00 MXN</option>
+                    </select>
+
+                    <label for="formacompra">¿Comó seria su compra?</label>
+                    <select name="formacompra" id="formacompra" data-form-field="formacompra">
+                        <option value="null" selected disabled>Seleccione</option>
+                        <option value="contado">Contado</option>
+                        <option value="credito">Crédito de banco</option>
+                        <option value="fovissste">FOVISSSTE</option>
+                        <option value="infonavit">INFONAVIT</option>
+                    </select>
+
+                    <label for="tiempo">¿Tiempo de espera para comprar?</label>
+                    <select name="tiempo" id="tiempo" data-form-field="tiempo">
+                        <option value="null" selected disabled>Seleccione</option>
+                        <option value="inmediato">Inmediato</option>
+                        <option value="1 a 2 meses">De 1 a 2 meses</option>
+                        <option value="mas de 3 meses">Más de 3 meses</option>
+                        
+                    </select>
+
+                    <label for="agendar">Agendar llamada</label>
+                    <input type="date" name="agendar" id="agendar"  required>
+    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="5" required></textarea>
+                    <input type="submit" name="enviar" id="enviar" value="Enviar" class="boton btn-formulario">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+    <div id="requisitos" class="contenedor requisitos">
+        <h2>Requisitos</h2>
+        <p><span> ¿Qué hacer si está interesado en una propiedad para la compra?</span><br>
+            R Inmobiliaria tiene un personal disponible para mostrar la vivienda. Lo cual deberá coordinarse previamente, de preferencia 1 o 2 días antes.
+            En caso de cancelarse la cita, lo recomendable es avisar con anticipación a R Inmobiliaria.
+        </p>
+        <p><span> ¿Qué debo hacer si tengo interés en comprar una propiedad?</span><br>
+            Enviar una notificación de carta de intención de compra por un monto de 5,000 MXN en el cual debe estar adjuntado identificación vigente de la persona que compra la propiedad y dirección vigente donde reside.
+        </p>
+        <p>Datos de la cuenta <br>
+            Número de cuenta: 0111031104 <br>
+            Clabe:     012100001110311042 <br>
+            Banco: BBVA <br>
+            Nombre: CONSTRUYENDO MI PATRIMONIO EN MÉXICO S.A. DE C.V. <br>
+        </p>
+        <p>R Inmobiliaria entrega información al comprador interesado de la propiedad que pueda ser adquirida a crédito o venta de contado. <br>
+            - Escritura de la propiedad. <br>
+            - Predial actualizado. <br>
+            - Pago de agua. <br>
+            - Certificaciones. <br>
+        </p>
+        <p>Por parte del comparador deberá compartir a R Inmobiliaria los siguientes requisitos: <br>  
+            - INE. <br>
+            - Comprobante de domicilio. <br>
+            - Acta de nacimiento. <br>
+            - RFC. <br>
+            - CURP. <br>
+             
+        </p>
+        <p>
+            El comprador inicia los siguientes pasos:<br>
+            - Solicita el avaluó, dependiendo del avaluó, R Inmobiliaria hace el ajuste del valor del inmueble.<br>
+            - Inscribe el crédito (si aplica).<br>
+            - Seguimiento de la notaria.<br>
+            - Se coordina entre las partes la fecha de la firma.<br>
+            
+        </p>
+        <p>
+            <b> Avisar con una semana de anticipación a COMIPAMEX sobre la compra y venta del inmueble para efectos de escrituración, es importante especificar: dirección de la notaría, fecha y hora.
+            NOTA: En caso de requerir algún papel en original o una documentación extra para realizar la firma, por favor avisar con suficiente antelación.</b>
+        </p>
+        <p>
+            En caso que usted desee adquirir mas de (3) tres propiedades, R Inmobiliaria otorgará un descuento de acuerdo al valor de las viviendas, mismo que tendrá que ser autorizado por Dirección General.
+        </p>
+    </div>
+    <!-- <div class="formulario">
+        <form action="enviar.php" method="POST" class="formulario">
+            <fieldset>
+                <legend>Información personal</legend>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="Tu email" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Tu telefono" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="5" required></textarea>
+            </fieldset> 
+            <input type="submit" name="enviar" id="enviar" value="Enviar" class="boton morado btn-formulario">
+        </form>
+    </div> -->
+    <!-- TARJETAS DE DEYI INICIO -->
+    <div class="imagenes-contacto">
+        <picture>
+            <source srcset="build/img/1. Firma Deyi Carol Infante.avif" type="image/avif">
+            <source srcset="build/img/1. Firma Deyi Carol Infante.webp" type="image/webp">
+            <img loading="lazy"  src="build/img/1. Firma Deyi Carol Infante.jpg" alt="Deyi Carol Infante"
+            width="640" height="457"
+            srcset="build/img/1. Firma Deyi Carol Infante.jpg 640w,
+            build/img/1. Firma Deyi Carol Infante.jpg 320w"
+            sizes="(min-width: 650px) 50vw, 100vw">
+        </picture>
+        <picture>
+            <source srcset="build/img/2. Firma Verónica Trejo.avif" type="image/avif">
+            <source srcset="build/img/2. Firma Verónica Trejo.webp" type="image/webp">
+            <img loading="lazy"  src="build/img/2. Firma Verónica Trejo.jpg" alt="Veronica Trejo"
+            width="640" height="457"
+            srcset="build/img/2. Firma Verónica Trejo.jpg 640w,
+            build/img/2. Firma Verónica Trejo.jpg 320w"
+            sizes="(min-width: 650px) 50vw, 100vw">
+        </picture>
+    </div>
+    <!-- TARJETAS DE DEYI FIN -->
+    
+    <!-- INICIO DE FOOTER -->
+
+    <footer class="pie">
+        <div></div>
+        <a href="index.html" class="logotipo-foot">
+            <img src="build/img/icono-05.webp" alt="R Inmobiliaria logo" 
+            width="245"
+            height="135">
+        </a>
+        <div class="redes--foot">
+            <a href="https://www.facebook.com/RInmobiliariamexico" target="blank"><img src="build/img/icono-Face.webp" alt="icono R Inmobiliaria facebook" width="70"
+                height="70"></a>
+            
+            <a href="https://wa.me/525612010298" target="blank"><img src="build/img/icono-whatsapp.webp" alt="icono R Inmobiliaria whatsapp" width="70"
+                height="70"></a>
+        </div>
+    </footer>
+
+    
+    <!-- FIN DE FOOTER -->
+    <!-- INICIO DE SCRIPT'S -->
+    <!-- <script src="build/js/app.js"></script>
+    <script src="build/js/modernizr.js"></script> -->
+    <!-- FIN DE SCRIPT'S -->
+</body>
+</html>

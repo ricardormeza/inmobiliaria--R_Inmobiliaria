@@ -1,0 +1,153 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.main{
+    background-image: url(../img/casatres.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    
+    @include m.telefono{
+        background-position: 60% 56%;
+        height: 700px;
+    }
+    @include m.tablet{
+        height: 600px;
+    }
+    @include m.desktop{
+        height: 500px;
+    }
+    .contenido-main{
+        display: grid;
+        @include m.grid(2, 2rem);
+        // grid-template-rows: 1fr;
+        grid-template-areas:
+            "texto1 texto2";
+
+        @include m.telefono{
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "texto1" 
+                "texto2";
+        }
+
+        .texto1{
+            grid-area: texto1;
+
+            .texto1-titulos{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: v.$titulos;
+                gap: 1rem;
+                margin-top: 25rem;
+                h1,h2{
+                    font-size: 4rem;
+                    color: v.$bgMain;
+                    text-align: center;
+                }
+                
+                
+                @include m.telefono{
+                    justify-items: center;
+                    margin-top: 14rem;
+                }
+                @include m.tablet{
+                    margin-top: 14rem;
+                }
+            }
+        }
+        .texto2{
+            grid-area: texto2;
+            gap: 1rem;
+
+            a{
+                color: red;
+            }
+        }
+        
+    }
+    .main-cita a{
+        display: flex;
+        align-items: center;
+        blockquote{
+            color: v.$gris2;
+            font-size: 2rem;
+            margin: 1rem;
+        }
+        img{
+            color: v.$gris2;
+            width: 2.3rem;
+            height: 2.3rem;
+        }
+    }
+    .main-botones{
+        display: flex;
+        justify-content: space-around;
+        gap: 3rem;
+        margin-bottom: 2rem;
+        
+        a{
+            color: v.$bgMain;
+
+            &:hover{
+                color: v.$texto;
+            }
+        }
+        
+
+        @include m.minitelefono{
+            width: 90%;
+        }
+        @include m.telefono{
+            flex-direction: column;
+            width: 350px!important;
+        }
+    }
+}
+
+
+.main-contacto{
+    background-image: url(../img/casa-dos.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 2rem;
+    width: 100%;
+    @include m.telefono{
+        background-position: 60% 56%;
+        height: 1243px;
+    }
+    @include m.tablet{
+        height: 872px;
+    }
+    @include m.desktop{
+        height: 850px;
+        
+    }
+}
+
+.imagenes-contacto{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    padding: 2rem 0 4rem 0;
+    @include m.telefono{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    picture{
+        width: 30%!important;
+        @include m.telefono{
+            width: 80%!important;
+        }
+        @include m.tablet{
+            width: 40%!important;
+        }
+    }
+}

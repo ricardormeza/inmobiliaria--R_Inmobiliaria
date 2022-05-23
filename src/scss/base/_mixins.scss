@@ -1,0 +1,51 @@
+@use 'variables' as v;
+
+// MEDIA QUERIES
+@mixin minitelefono {
+    @media (max-width: v.$minitelefono){
+        @content;
+    }
+}
+@mixin telefono {
+    @media (max-width: v.$telefono){
+        @content;
+    }
+}
+@mixin iphone12 {
+    @media (min-width: v.$iphone12){
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: v.$tablet){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop){
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL){
+        @content;
+    }
+}
+@mixin tele {
+    @media (min-width: v.$tele){
+        @content;
+    }
+}
+@mixin  grid($columnas, $espaciado) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado;
+}
+
+@mixin resetear-lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
